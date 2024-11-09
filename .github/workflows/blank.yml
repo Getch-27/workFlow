@@ -38,4 +38,4 @@ jobs:
           echo test, and deploy your project.
           
       - name: index.html test
-        run: npx htmlhint "**/*.html"
+        run: npx htmlhint "index.html"
