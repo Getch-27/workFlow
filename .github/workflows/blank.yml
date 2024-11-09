@@ -8,7 +8,7 @@ on:
   push:
     branches: [ "main" , "development", "test"]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "development", "test"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,4 +38,6 @@ jobs:
           echo test, and deploy your project.
           
       - name: index.html test
-        run: npx htmlhint "index.html"
+        run: |
+           npx htmlhint "index.html"
+           npx htmlhint "about.html"
